@@ -22,4 +22,4 @@ while True:
             fade_amount = -fade_amount  # if it has - change directions from the next iteration.
 
     client.put_pixels(led_list)         # send the entire new list to the lights.
-    sleep(.02)                          # 20ms delay
+    sleep(.02)                          # 20ms delay 
