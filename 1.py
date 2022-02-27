@@ -1,3 +1,5 @@
+from __future__ import division
+
 import opc
 from time import sleep
 
