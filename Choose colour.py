@@ -16,11 +16,11 @@ print(led_list)
 print(enumerate(led_list))
 
 print('''Choose colour:'
-              /t 1. Red
-              /t 2. Blue
-              /t 3. Yellow
-              /t 4. Green
-              /t 5. White''')
+              1. Red
+              2. Blue
+              3. Yellow
+              4. Green
+              5. White''')
            
 ttk.Label(frm, text='''Choose colour:'
               1. Red
