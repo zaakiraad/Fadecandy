@@ -4,7 +4,7 @@ from time import sleep
 client = opc.Client('localhost:7890')
 
 led_list = [(0,0,0)]*360
-fade_amount = 100
+fade_amount = 50
 print(led_list)
 print(enumerate(led_list))
 
