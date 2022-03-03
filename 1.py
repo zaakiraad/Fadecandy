@@ -51,6 +51,8 @@ if answer.lower()=='a':
 else:
     print('Wrong: Answer is ')
 
+client.put_pixels(led_colour)
+
 
 mark = (score/questions)*100
 print('''
