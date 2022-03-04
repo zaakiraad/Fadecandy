@@ -5,7 +5,7 @@ import time
 
 client = opc.Client('localhost:7890')
 
-led_colour = [(0,0,0)]*360
+led_colour = [(0,0,0)]*360              # set background colour to leds off
 
 led_colour[20] = (255,255,0)
 led_colour[21] = (255,255,0)
@@ -30,8 +30,8 @@ led_colour[325] = (255,255,0)
 led_colour[326] = (255,255,0)
 led_colour[327] = (255,255,0)
 led_colour[328] = (255,255,0)
-led_colour[329] = (255,255,0)
+led_colour[329] = (255,255,0)           # loight up chosen leds only
 
 
 
-client.put_pixels(led_colour) 
+client.put_pixels(led_colour)          # send to leds
