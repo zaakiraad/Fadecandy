@@ -1,6 +1,6 @@
 from __future__ import division
 
-import opc
+import opc                                                      # import opc code
 from time import sleep
 
 score = 0
@@ -10,14 +10,14 @@ client = opc.Client('localhost:7890')
 
 led_list = [(0,0,0)]*360
 print(led_list)
-print(enumerate(led_list))
+print(enumerate(led_list))                                      # enumerate creates a list of tuples that contain index and contents of each element
 
 print('Welcome to the Fadecandy Quiz')
 answer=input('Ready to play? (yes/no) :')
 
-value = input('''Press 1 to Start:'
+value = input('''Press 1 to Start:'                           
               \t 1. Start
-              Type number then Enter.''')
+              Type number then Enter.''')                       # type 1 as input to start quiz
 
 def func1(val):
         return val**val
@@ -29,16 +29,16 @@ while True:
     else:
         value = input("invalid input, try again:")
 
-if value == 1:
-    if answer.lower()=='yes':
+if value == 1:                                                   # typing 1 starts the quiz from input
+    if answer.lower()=='yes':                                    # if typed yes from ready to play, start questions 
         answer=input('Question 1: How many LEDs are there?  ')
-        if answer.lower()=='360':
-            score += 1
+        if answer.lower()=='360':                                # say only correct answer
+            score += 1                                           # adds 1 to score if correct
             print('Correct')
             led_colour = [(0,255,0)]*1
         else:
-            print('Wrong: Answer is 360')
-client.put_pixels(led_colour)
+            print('Wrong: Answer is 360')                        # if wrong answer, print right answer
+client.put_pixels(led_colour)                                    # update led colour
 
             
 
@@ -83,14 +83,14 @@ if answer.lower()=='clock':
 else:
     print('Wrong: Answer is clock ')
 
-client.put_pixels(led_colour)
+client.put_pixels(led_colour)                                   # send the entire new list to the lights.
 
 
-mark = (score/questions)*100
+mark = (score/questions)*100                                    # calculate mark out of 100%                         
 print('''
                                  Score %:''', mark)
 print('                          Thank you for playing!')
 
 
-client.put_pixels(led_colour)
+client.put_pixels(led_colour)                                   # update led colour to show how many questions answered in total
  
