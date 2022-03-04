@@ -13,7 +13,7 @@ led_colour = [(255,0,0)]*360            # led colour r,g,b values
 
 print (enumerate(led_colour))
 for item in enumerate(led_colour):       # enumerate creates a list of tuples with contents of each element and index
-    time.sleep(0.01)
+    time.sleep(0.01)                     # time and sleep for 1 ms
     print (item)
     if item[0]%1 == 0:
         led_colour = [(200,200,0)]*360
